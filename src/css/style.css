@@ -1,0 +1,61 @@
+/* =============== Fonts ============== */
+
+@font-face {
+  font-family: "NotoSansJP";
+  src: url(../assets/fonts/NotoSansJP-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url(../assets/fonts/Outfit-VariableFont_wght.ttf);
+}
+
+/* ============== Header ================ */
+
+#header ul li {
+  font-size: 15px;
+}
+
+/* =============== Hero ================ */
+
+.circle-text {
+  display: flex;
+  position: absolute;
+  top: -4%;
+  left: -8%;
+  background-color: #000;
+  color: #fff;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  font-size: 25px;
+  font-weight: 200;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  word-spacing: 3.75px;
+}
+
+.logo-icon {
+  margin-top: 5.5rem;
+}
+
+.slide-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: text-scroll 8s linear infinite;
+}
+
+@keyframes text-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
