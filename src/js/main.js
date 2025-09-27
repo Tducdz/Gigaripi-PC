@@ -10,3 +10,4 @@ async function loadComponents(id, file) {
 
 loadComponents("header", "header.html");
 loadComponents("hero", "hero.html");
+loadComponents("benefit", "benefit.html");
