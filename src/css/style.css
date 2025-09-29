@@ -100,3 +100,15 @@
 }
 
 /* ================= Value-1 ================== */
+
+/* ================= Value-2 ================== */
+
+.img-value-2:hover {
+  animation: scroll-img 0.2s linear forwards;
+}
+
+@keyframes scroll-img {
+  to {
+    transform: translateX(-50%);
+  }
+}
