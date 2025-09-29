@@ -101,14 +101,18 @@
 
 /* ================= Value-1 ================== */
 
-/* ================= Value-2 ================== */
-
-.img-value-2:hover {
-  animation: scroll-img 0.2s linear forwards;
+@media (width > 2367px) {
+  .value-slider {
+    justify-content: center;
+  }
 }
 
-@keyframes scroll-img {
-  to {
-    transform: translateX(-50%);
-  }
+/* ================= Value-2 ================== */
+
+.img-value-2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.img-value-2:hover {
+  transform: translateX(-50%);
 }
