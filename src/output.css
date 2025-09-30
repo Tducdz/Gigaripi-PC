@@ -33,6 +33,7 @@
     --text-7xl: 4.5rem;
     --text-7xl--line-height: 1;
     --font-weight-extralight: 200;
+    --font-weight-light: 300;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
@@ -304,6 +305,9 @@
   .mt-\[470px\] {
     margin-top: 470px;
   }
+  .mr-1 {
+    margin-right: calc(var(--spacing) * 1);
+  }
   .mr-3 {
     margin-right: calc(var(--spacing) * 3);
   }
@@ -330,6 +334,9 @@
   }
   .ml-4 {
     margin-left: calc(var(--spacing) * 4);
+  }
+  .ml-12 {
+    margin-left: calc(var(--spacing) * 12);
   }
   .ml-auto {
     margin-left: auto;
@@ -669,6 +676,9 @@
   .pt-6 {
     padding-top: calc(var(--spacing) * 6);
   }
+  .pt-18 {
+    padding-top: calc(var(--spacing) * 18);
+  }
   .pt-20 {
     padding-top: calc(var(--spacing) * 20);
   }
@@ -689,6 +699,9 @@
   }
   .pb-29 {
     padding-bottom: calc(var(--spacing) * 29);
+  }
+  .pb-30 {
+    padding-bottom: calc(var(--spacing) * 30);
   }
   .pb-36 {
     padding-bottom: calc(var(--spacing) * 36);
@@ -785,6 +798,9 @@
   .text-\[13px\] {
     font-size: 13px;
   }
+  .text-\[15px\] {
+    font-size: 15px;
+  }
   .text-\[15rem\] {
     font-size: 15rem;
   }
@@ -832,6 +848,10 @@
   .font-extralight {
     --tw-font-weight: var(--font-weight-extralight);
     font-weight: var(--font-weight-extralight);
+  }
+  .font-light {
+    --tw-font-weight: var(--font-weight-light);
+    font-weight: var(--font-weight-light);
   }
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
