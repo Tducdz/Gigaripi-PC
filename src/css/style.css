@@ -131,14 +131,6 @@ html {
 
 /* =================== Tutorial =================== */
 
-/* .question:hover {
-  background-color: #fff;
-}
-
-.question:hover > .answer {
-  display: block;
-} */
-
 .answer {
   max-height: 0;
   overflow: hidden;
