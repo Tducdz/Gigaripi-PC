@@ -2,28 +2,30 @@
 
 ## Cấu trúc thư mục
 
+```bash
 GIGARIPI_PC/
 │
 ├── node_modules/
 ├── src/
-│ ├── assets/
-│ │ ├── fonts/
-│ │ └── img/
-│ │
-│ ├── components/
-│ │
-│ ├── css/
-│ │ └── style.css
-│ │
-│ ├── js/ 
-│ │
-│ ├── input.css
-│ └── output.css
+│   ├── assets/
+│   │   ├── fonts/
+│   │   └── img/
+│   │
+│   ├── components/
+│   │
+│   ├── css/
+│   │   └── style.css
+│   │
+│   ├── js/
+│   │
+│   ├── input.css
+│   └── output.css
 │
-├── index.html 
-├── package.json 
-├── package-lock.json 
+├── index.html
+├── package.json
+├── package-lock.json
 └── README.md
+```
 
 ## Cài đặt và chạy dự án
 
