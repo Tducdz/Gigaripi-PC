@@ -1,17 +1,35 @@
-const loadComponents = async (id, file) => {
-  const response = await fetch(`src/components/${file}`);
-  const data = await response.text();
-  document.getElementById(id).innerHTML = data;
-};
+const components = [
+  { id: "header", file: "header.html" },
+  { id: "hero", file: "hero.html" },
+  { id: "benefit", file: "benefit.html" },
+  { id: "value-1", file: "value-1.html" },
+  { id: "value-2", file: "value-2.html" },
+  { id: "feature", file: "feature.html" },
+  { id: "functions", file: "functions.html" },
+  { id: "tutorial", file: "tutorial.html" },
+  { id: "contact", file: "contact.html" },
+  { id: "footer", file: "footer.html" },
+];
 
-loadComponents("header", "header.html");
-loadComponents("hero", "hero.html");
-loadComponents("benefit", "benefit.html");
-loadComponents("value-1", "value-1.html");
-loadComponents("value-2", "value-2.html");
-loadComponents("feature", "feature.html");
-loadComponents("functions", "functions.html");
-loadComponents("plans", "plans.html");
-loadComponents("tutorial", "tutorial.html");
-loadComponents("contact", "contact.html");
-loadComponents("footer", "footer.html");
+async function loadComponents({ id, file }) {
+  const el = document.getElementById(id);
+  if (!el) {
+    console.warn(`Không tìm thấy phần tử ${id}`);
+    return;
+  }
+  try {
+    const res = await fetch(`src/components/${file}`, { cache: "no-cache" });
+    if (!res.ok) throw new Error(`${file}: ${res.status} ${res.statusText}`);
+    el.innerHTML = await res.text();
+  } catch (err) {
+    console.error(`Lỗi tải ${file}:`, err);
+    el.innerHTML = "<!-- Load failed -->";
+  }
+}
+
+async function loadAll() {
+  await Promise.all(components.map(loadComponents));
+  document.dispatchEvent(new CustomEvent("components:ready"));
+}
+
+loadAll();
